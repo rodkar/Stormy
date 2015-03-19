@@ -10,6 +10,7 @@ public class CurrentWeather {
     private double mTemperature;
     private double mHumidity;
     private double mPrecipChance;
+    private String mSummary;
 
     public String getIcon() {
         return mIcon;
@@ -59,5 +60,5 @@ public class CurrentWeather {
         mSummary = summary;
     }
 
-    private String mSummary;
+
 }
