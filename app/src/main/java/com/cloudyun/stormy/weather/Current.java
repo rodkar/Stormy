@@ -1,4 +1,6 @@
-package com.cloudyun.stormy;
+package com.cloudyun.stormy.weather;
+
+import com.cloudyun.stormy.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -7,7 +9,7 @@ import java.util.TimeZone;
 /**
  * Created by 2013_13_mbp on 19/3/15.
  */
-public class CurrentWeather {
+public class Current {
 
     private String mIcon;
     private long mTime;
