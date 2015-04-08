@@ -29,7 +29,6 @@ public class HourlyForecastActivity extends ActionBarActivity {
         setContentView(R.layout.activity_hourly_forecast);
         ButterKnife.inject(this);
 
-
         Intent intent = getIntent();
         Parcelable[] parcelables = intent.getParcelableArrayExtra(MainActivity.HOURLY_FORECAST);
         mHours = Arrays.copyOf(parcelables, parcelables.length, Hour[].class);

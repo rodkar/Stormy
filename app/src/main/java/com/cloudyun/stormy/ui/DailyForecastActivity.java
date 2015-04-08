@@ -22,14 +22,9 @@ public class DailyForecastActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_daily_forecast);
 
-//        String[] daysOfTheWeek = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
-//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, daysOfTheWeek);
-//        setListAdapter(adapter);
-
         Intent intent = getIntent();
         Parcelable[] parcelables = intent.getParcelableArrayExtra(MainActivity.DAILY_FORECAST);
         mDays = Arrays.copyOf(parcelables, parcelables.length, Day[].class);
-
 
         DayAdapter adapter = new DayAdapter(this, mDays);
         setListAdapter(adapter);
@@ -46,6 +41,5 @@ public class DailyForecastActivity extends ListActivity {
         String message = String.format("On %s the high will be %s and it will be %s", dayOfTheWeek, highTemp, conditions);
 
         Toast.makeText(this, message, Toast.LENGTH_LONG).show();
-
     }
 }
